@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+.app {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}

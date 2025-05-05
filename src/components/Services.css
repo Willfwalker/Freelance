@@ -1,0 +1,98 @@
+.services {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.2rem;
+  color: #333;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Style for custom icons when you add them */
+.service-icon .custom-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.service-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.service-card li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 25px;
+}
+
+.service-card li:before {
+  content: "✓";
+  color: #6e8efb;
+  position: absolute;
+  left: 0;
+}
+
+.service-card li:last-child {
+  border-bottom: none;
+}
+
+.price {
+  font-weight: bold;
+  color: #6e8efb;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
