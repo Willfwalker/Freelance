@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import ScrollAnimation from './ScrollAnimation';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -50,16 +51,19 @@ const Contact = () => {
 
   return (
     <section className="contact" id="contact">
-      <h2>Get in Touch</h2>
+      <ScrollAnimation animation="fade-up">
+        <h2>Get in Touch</h2>
+      </ScrollAnimation>
+
       <div className="contact-container">
-        <div className="contact-info">
+        <ScrollAnimation animation="fade-right" delay={200} className="contact-info">
           <p>Ready to discuss your project? Send me a message or email me directly at:</p>
           <a href="mailto:willfwalker@gmail.com" className="email-link">willfwalker@gmail.com</a>
           <p>I'm also available for quick calls to discuss your needs:</p>
           <a href="https://calendly.com" className="calendly-link" target="_blank" rel="noopener noreferrer">Schedule a call</a>
-        </div>
+        </ScrollAnimation>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <ScrollAnimation animation="fade-left" delay={400} tagName="form" className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input
@@ -109,7 +113,7 @@ const Contact = () => {
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
-        </form>
+        </ScrollAnimation>
       </div>
     </section>
   );

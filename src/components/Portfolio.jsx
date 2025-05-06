@@ -1,5 +1,7 @@
 import React from 'react';
 import './Portfolio.css';
+import ScrollAnimation from './ScrollAnimation';
+import StaggeredList from './StaggeredList';
 // Import project images - replace with your actual screenshots when you add them
 import projectImage1 from '../assets/react.svg'; // Using React logo as temporary placeholders
 import projectImage3 from '../assets/react.svg';
@@ -63,10 +65,18 @@ class PageScraper:
 
   return (
     <section className="portfolio" id="portfolio">
-      <h2>Portfolio</h2>
-      <div className="projects-container">
+      <ScrollAnimation animation="fade-up">
+        <h2>Portfolio</h2>
+      </ScrollAnimation>
+
+      <StaggeredList className="projects-container" staggerDelay={200}>
         {projects.map(project => (
-          <div className="project-card" key={project.id}>
+          <ScrollAnimation
+            animation="fade-up"
+            delay={project.id * 100}
+            className="project-card"
+            key={project.id}
+          >
             <a
               href={project.link}
               target="_blank"
@@ -134,9 +144,9 @@ class PageScraper:
                 </div>
               </div>
             </a>
-          </div>
+          </ScrollAnimation>
         ))}
-      </div>
+      </StaggeredList>
     </section>
   );
 };
