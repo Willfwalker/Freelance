@@ -15,7 +15,7 @@ const About = () => {
       <div className="about-content">
         <ScrollAnimation animation="fade-right" delay={200} className="about-text">
           <p>
-            Hi, I'm William Walker, a Computer Science student at University College. I'm passionate about creating
+            Hi, I'm William Walker, a Computer Science student at Belhaven University. I'm passionate about creating
             efficient, user-friendly websites and automation solutions that help small businesses thrive.
           </p>
           <p>
